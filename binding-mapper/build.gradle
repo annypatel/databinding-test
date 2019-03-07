@@ -11,6 +11,9 @@ android {
 }
 
 dependencies {
+    compileOnly deps.kotlin
+    compileOnly deps.dataBinding
+    compileOnly deps.testCore
 }
 
 apply from: rootProject.file("gradle/maven_publish.gradle")
