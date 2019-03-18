@@ -1,0 +1,22 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+        applicationId "databinding.samples"
+        versionCode 1
+        versionName "1.0"
+    }
+
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation deps.kotlin
+    implementation deps.appcompat
+}
