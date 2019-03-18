@@ -18,6 +18,8 @@ buildscript {
         'dokka'      : '0.9.17',
         'dataBinding': '3.3.1',
         'testCore'   : '1.1.0',
+        'junit'      : '4.12',
+        'mockito'    : '2.1.0',
     ]
 
     // Dependencies
@@ -25,6 +27,8 @@ buildscript {
         'kotlin'     : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
         'dataBinding': "androidx.databinding:databinding-runtime:$versions.dataBinding",
         'testCore'   : "androidx.test:core:$versions.testCore",
+        'junit'      : "junit:junit:$versions.junit",
+        'mockito'    : "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockito",
     ]
 
     repositories {

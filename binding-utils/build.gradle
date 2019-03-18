@@ -1,0 +1,21 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+    }
+}
+
+dependencies {
+    implementation deps.kotlin
+    implementation deps.dataBinding
+
+    testImplementation deps.junit
+    testImplementation deps.mockito
+}
+
+apply from: rootProject.file("gradle/maven_publish.gradle")
