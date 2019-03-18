@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/binding-mapper" />
+            <option value="$PROJECT_DIR$/binding-testutils" />
             <option value="$PROJECT_DIR$/binding-utils" />
           </set>
         </option>

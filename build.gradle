@@ -16,6 +16,7 @@ buildscript {
         'gvp'        : '0.20.0',
         'amp'        : '3.6.2',
         'dokka'      : '0.9.17',
+        'appcompat'  : '1.0.0',
         'dataBinding': '3.3.1',
         'testCore'   : '1.1.0',
         'junit'      : '4.12',
@@ -26,6 +27,7 @@ buildscript {
     ext.deps = [
         'kotlin'     : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
         'dataBinding': "androidx.databinding:databinding-runtime:$versions.dataBinding",
+        'appcompat'  : "androidx.appcompat:appcompat:$versions.appcompat",
         'testCore'   : "androidx.test:core:$versions.testCore",
         'junit'      : "junit:junit:$versions.junit",
         'mockito'    : "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockito",

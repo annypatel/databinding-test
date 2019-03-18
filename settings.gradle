@@ -1,2 +1,3 @@
 include ':binding-utils'
+include ':binding-testutils'
 include ':binding-mapper'
