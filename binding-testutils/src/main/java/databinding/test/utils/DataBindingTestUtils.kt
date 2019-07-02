@@ -11,6 +11,15 @@ import androidx.databinding.ViewDataBinding
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 
 /**
+ * Inflates a binding layout and calls [init] on newly-created binding for that layout.
+ */
+inline fun <T : ViewDataBinding> inflate(
+    @LayoutRes layout: Int,
+    @StyleRes style: Int = R.style.Theme_AppCompat,
+    init: T.() -> Unit
+) = inflate<T>(layout, style).init()
+
+/**
  * Inflates a binding layout and returns the newly-created binding for that layout.
  */
 fun <T : ViewDataBinding> inflate(@LayoutRes layout: Int, @StyleRes style: Int = R.style.Theme_AppCompat): T {
@@ -22,6 +31,16 @@ fun <T : ViewDataBinding> inflate(@LayoutRes layout: Int, @StyleRes style: Int =
     val binding = DataBindingUtil.inflate<T>(inflater, layout, parent, true)
     binding.executePendingBindings()
     return binding
+}
+
+/**
+ * Executes pending binding right away.
+ */
+inline fun <T : ViewDataBinding, S> T.bindNow(state: S?, init: S.() -> Unit) {
+    state?.let {
+        it.init()
+        executePendingBindings()
+    }
 }
 
 /**
