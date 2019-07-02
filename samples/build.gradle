@@ -17,12 +17,24 @@ android {
     dataBinding {
         enabled true
     }
+
+    testOptions.unitTests {
+        includeAndroidResources = true
+    }
 }
 
 dependencies {
     implementation project(":binding-utils")
     implementation deps.kotlin
     implementation deps.appcompat
+
+    testImplementation project(":binding-testutils")
+    testImplementation deps.junit
+    testImplementation deps.junitAndroid
+    testImplementation deps.espresso
+    testImplementation deps.robolectric
+    testImplementation deps.mockito
+    testImplementation deps.mockitoInline
 
     androidTestImplementation project(":binding-testutils")
     androidTestImplementation deps.junit

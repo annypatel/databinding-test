@@ -20,11 +20,14 @@ buildscript {
         'dataBinding'     : '3.3.1',
         'testCore'        : '1.1.0',
         'junit'           : '4.12',
+        'junitAndroid'    : '1.1.0',
         'mockito'         : '2.1.0',
+        'mockitoInline'   : '2.23.0',
         'mockitoDexInline': '2.19.0',
         'testRunner'      : '1.1.1',
         'testRules'       : '1.1.1',
         'espresso'        : '3.1.1',
+        'robolectric'     : '4.2',
     ]
 
     // Dependencies
@@ -34,11 +37,14 @@ buildscript {
         'appcompat'       : "androidx.appcompat:appcompat:$versions.appcompat",
         'testCore'        : "androidx.test:core:$versions.testCore",
         'junit'           : "junit:junit:$versions.junit",
+        'junitAndroid'    : "androidx.test.ext:junit:$versions.junitAndroid",
         'mockito'         : "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockito",
+        'mockitoInline'   : "org.mockito:mockito-inline:$versions.mockitoInline",
         'mockitoDexInline': "com.linkedin.dexmaker:dexmaker-mockito-inline:$versions.mockitoDexInline",
         'testRunner'      : "androidx.test:runner:$versions.testRunner",
         'testRules'       : "androidx.test:rules:$versions.testRules",
-        'espresso'        : "androidx.test.espresso:espresso-core:$versions.espresso"
+        'espresso'        : "androidx.test.espresso:espresso-core:$versions.espresso",
+        'robolectric'     : "org.robolectric:robolectric:$versions.robolectric",
     ]
 
     repositories {
