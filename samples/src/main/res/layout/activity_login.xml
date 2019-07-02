@@ -7,6 +7,10 @@
         <variable
             name="viewState"
             type="databinding.samples.LoginViewState" />
+
+        <variable
+            name="viewModel"
+            type="databinding.samples.LoginViewModel" />
     </data>
 
     <LinearLayout
@@ -32,8 +36,10 @@
             android:text="@={viewState.password}" />
 
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.login()}"
             android:text="@string/btn_login" />
 
     </LinearLayout>

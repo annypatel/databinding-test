@@ -29,4 +29,6 @@ dependencies {
     androidTestImplementation deps.testRunner
     androidTestImplementation deps.testRules
     androidTestImplementation deps.espresso
+    androidTestImplementation deps.mockito
+    androidTestImplementation deps.mockitoDexInline
 }
