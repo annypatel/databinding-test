@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion buildConfig.compileSdk
@@ -9,6 +11,7 @@ android {
         applicationId "databinding.samples"
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     dataBinding {
@@ -17,6 +20,13 @@ android {
 }
 
 dependencies {
+    implementation project(":binding-utils")
     implementation deps.kotlin
     implementation deps.appcompat
+
+    androidTestImplementation project(":binding-testutils")
+    androidTestImplementation deps.junit
+    androidTestImplementation deps.testRunner
+    androidTestImplementation deps.testRules
+    androidTestImplementation deps.espresso
 }
