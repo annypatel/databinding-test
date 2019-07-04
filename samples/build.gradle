@@ -18,6 +18,15 @@ android {
         enabled true
     }
 
+    sourceSets {
+        test {
+            java.srcDir 'src/sharedTest/java'
+        }
+        androidTest {
+            java.srcDir 'src/sharedTest/java'
+        }
+    }
+
     testOptions.unitTests {
         includeAndroidResources = true
     }
@@ -31,6 +40,7 @@ dependencies {
     testImplementation project(":binding-testutils")
     testImplementation deps.junit
     testImplementation deps.junitAndroid
+    testImplementation deps.testRules
     testImplementation deps.espresso
     testImplementation deps.robolectric
     testImplementation deps.mockito
@@ -38,6 +48,7 @@ dependencies {
 
     androidTestImplementation project(":binding-testutils")
     androidTestImplementation deps.junit
+    androidTestImplementation deps.junitAndroid
     androidTestImplementation deps.testRunner
     androidTestImplementation deps.testRules
     androidTestImplementation deps.espresso
