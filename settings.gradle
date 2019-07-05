@@ -1,4 +1,4 @@
 include ':binding-utils'
 include ':binding-testutils'
 include ':binding-mapper'
-include ':samples'
+include ':samples:app'
