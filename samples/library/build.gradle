@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    sourceSets {
+        test {
+            java.srcDir 'src/sharedTest/java'
+        }
+        androidTest {
+            java.srcDir 'src/sharedTest/java'
+        }
+    }
+
+    testOptions.unitTests {
+        includeAndroidResources = true
+    }
+}
+
+dependencies {
+    implementation project(":binding-utils")
+    implementation deps.kotlin
+    implementation deps.appcompat
+
+    testImplementation project(":binding-testutils")
+    testImplementation project(":binding-mapper")
+    testImplementation deps.junit
+    testImplementation deps.junitAndroid
+    testImplementation deps.testRules
+    testImplementation deps.espresso
+    testImplementation deps.robolectric
+    testImplementation deps.mockito
+    testImplementation deps.mockitoInline
+
+    androidTestImplementation project(":binding-testutils")
+    androidTestImplementation deps.junit
+    androidTestImplementation deps.junitAndroid
+    androidTestImplementation deps.testRunner
+    androidTestImplementation deps.testRules
+    androidTestImplementation deps.espresso
+    androidTestImplementation deps.mockito
+    androidTestImplementation deps.mockitoDexInline
+}

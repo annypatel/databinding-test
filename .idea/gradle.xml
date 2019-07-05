@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/binding-utils" />
             <option value="$PROJECT_DIR$/samples" />
             <option value="$PROJECT_DIR$/samples/app" />
+            <option value="$PROJECT_DIR$/samples/library" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

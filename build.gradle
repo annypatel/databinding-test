@@ -10,7 +10,7 @@ buildscript {
     // Dependency versions
     ext.versions = [
         'agp'             : '3.4.1',
-        'kotlin'          : '1.3.21',
+        'kotlin'          : '1.3.20',
         'spotless'        : '3.16.0',
         'ktlint'          : '0.29.0',
         'gvp'             : '0.20.0',
